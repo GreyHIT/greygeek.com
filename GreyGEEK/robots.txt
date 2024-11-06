@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Disallow: /temporary/
-Disallow: /nonexistent-page/
-Disallow: /404/
