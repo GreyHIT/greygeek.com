@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREYGEEK - Регистрация</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <style>
+        /* Основные стили */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1E1E1E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registration-form {
+            width: 620px;
+            height: auto;
+            padding: 90px 40px 40px;
+            background-color: #D9D9D9;
+            border-radius: 37px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .registration-form .logo-container {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .registration-form img {
+            width: 380px;
+            height: auto;
+            margin-top: -55px;
+            border: 10px solid #D9D9D9;
+            border-radius: 37px;
+            padding: 36px;
+            background-color: #1C1C1C;
+        }
+
+        .form-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-group input {
+            width: 530px;
+            height: 50px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .register-btn, .toggle-mode-btn {
+            width: 80%;
+            max-width: 530px;
+            height: 75px;
+            border-radius: 20px;
+            background-color: #191818;
+            color: white;
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+            border: none;
+        }
+
+        .register-btn:hover {
+            background-color: #333333;
+        }
+
+        .toggle-mode-btn {
+            font-size: 18px;
+            background-color: #D9D9D9;
+            color: #333333;
+            font-weight: normal;
+            margin-top: 15px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .toggle-mode-btn:hover {
+            background-color: #C0C0C0;
+            color: #1E1E1E;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="registration-form">
+    <div class="logo-container">
+        <img src="GREYGEEK_Full.png" alt="GREYGEEK Logo">
+    </div>
+    <form id="registration-form" class="form-content">
+        <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Логин" required>
+        </div>
+        <div class="form-group" id="email-group">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Пароль" required>
+        </div>
+        <div class="form-group hidden" id="confirm-password-group">
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Подтвердить пароль" required>
+        </div>
+        <button type="submit" class="register-btn" id="register-btn">Зарегистрироваться</button>
+        <button type="button" class="toggle-mode-btn" id="toggle-mode-btn">Переключиться на Вход</button>
+        <div class="error-message" id="error-message"></div>
+    </form>
+</div>
+
+<script>
+    const emailGroup = document.getElementById('email-group');
+    const confirmPasswordGroup = document.getElementById('confirm-password-group');
+    const errorMessage = document.getElementById('error-message');
+    const registerBtn = document.getElementById('register-btn');
+    const toggleModeBtn = document.getElementById('toggle-mode-btn');
+
+    let isRegistrationMode = true; // По умолчанию - режим регистрации
+
+    // Переключение режима регистрации/входа
+    function toggleFormMode() {
+        isRegistrationMode = !isRegistrationMode;
+
+        if (isRegistrationMode) {
+            emailGroup.classList.remove('hidden');
+            confirmPasswordGroup.classList.remove('hidden');
+            registerBtn.textContent = 'Зарегистрироваться';
+            toggleModeBtn.textContent = 'Переключиться на Вход';
+        } else {
+            emailGroup.classList.add('hidden');
+            confirmPasswordGroup.classList.add('hidden');
+            registerBtn.textContent = 'Войти';
+            toggleModeBtn.textContent = 'Переключиться на Регистрацию';
+        }
+        errorMessage.textContent = '';
+    }
+
+    // Изначально показываем все поля для регистрации
+    window.onload = function() {
+        confirmPasswordGroup.classList.remove('hidden'); // Показываем поле подтверждения пароля
+    };
+
+    // Обработчик нажатия на кнопку переключения режима
+    toggleModeBtn.addEventListener('click', toggleFormMode);
+
+    // Обработчик отправки формы
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // предотвращаем отправку формы по умолчанию
+
+        const formData = new FormData(this); // собираем данные формы
+
+        fetch('http://localhost:63343/register.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Ответ от сервера:", data);  // Логирование ответа
+                errorMessage.textContent = data;
+                if (data.includes("Регистрация успешна")) {
+                    errorMessage.style.color = "green";
+                } else {
+                    errorMessage.style.color = "red";
+                }
+            })
+            .catch(error => {
+                console.error("Ошибка:", error);  // Логирование ошибки
+                errorMessage.textContent = "Ошибка: " + error;
+            });
+    });
+</script>
+
+</body>
+</html>

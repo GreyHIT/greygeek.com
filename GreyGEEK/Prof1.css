@@ -1,0 +1,199 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1C1C1C;
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nava {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Убедитесь, что линия не выходит за границы */
+    transition: color 0.3s;
+    font-weight: normal;
+}
+
+.nava::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nava:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nava:hover {
+    color: #e9ecef; /* Цвет текста при наведении, можно изменить по желанию */
+    font-weight: bold; /* Жирное начертание шрифта при наведении */
+}
+
+
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchText {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #444444;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.searchText:focus {
+    border-color: #666666;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
+}
+
+.Login {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.Login:hover {
+    background-color: #444444;
+    transform: scale(1.05);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.avatar_p {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.avatar_p:hover {
+    transform: scale(1.05);
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dropdowndiv, .rayons, .rayons1, .prap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 500;
+    color: #333;
+}
+
+select, .submitButtonC, .BYW {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+select:hover, .submitButtonC:hover, .BYW:hover {
+    border-color: #666666;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
+    transform: scale(1.05);
+}
+
+select:focus, .submitButtonC:focus, .BYW:focus {
+    border-color: #666666;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
+}
+
+.submitButtonC:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.prap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.prap label {
+    margin-right: 15px;
+}
+
+.BYW {
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.BYW:hover {
+    background-color: #444444;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    display: none;
+}

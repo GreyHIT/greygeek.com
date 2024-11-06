@@ -1,0 +1,236 @@
+/* Основные стили */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1C1C1C;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 15px 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #e9ecef;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-text {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+/* Стили для страницы фильма */
+.film-detail {
+
+     /* Увеличена максимальная ширина */
+    margin: 0 auto;
+}
+
+.film-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 60px 20px 0 60px;
+}
+
+.film-poster {
+    width: 360px; /* Вертикальный постер */
+    height: 540px;
+    border-radius: 10px;
+}
+
+.film-info {
+    max-width: 900px; /* Увеличенная максимальная ширина */
+    padding-left: 60px; /* Отступ слева для перемещения правее */
+    display: flex;
+    flex-direction: column;
+
+}
+.film-info p {
+    margin-bottom: 30px; /* Измените значение по необходимости */
+}
+
+.film-title {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.film-year,
+.film-country,
+.film-budget,
+.film-genre,
+.film-box-office,
+.film-director,
+.film-runtime {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.film-trailer {
+    margin-top: -10px;
+    margin-left: 35%;
+}
+
+.film-trailer iframe {
+    width: 425px;
+    height: 255px;
+    border: none;
+
+}
+
+.film-cast {
+    margin-top: 20px;
+    padding: 0 10px  10px 60px;
+}
+
+.film-cast ul {
+    list-style: none;
+    padding: 0;
+}
+
+.film-cast li {
+    font-size: 18px;
+}
+
+.film-synopsis {
+    background-color: #1C1C1C; /* Сменен фон на светло-серый */
+    padding: 130px 110px 130px 110px;
+    margin-top: 20px;
+    color: white;
+}
+
+.film-synopsis p {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.film-player {
+
+    margin-top: 20px;
+    padding: 60px 60px  60px 60px;
+}
+
+.film-player iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+
+}
+
+.similar-films {
+    padding: 20px 60px 60px 60px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.film-card {
+    min-width: 200px;
+    height: 300px;
+    background-color: lightgray;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.film-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slider-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Прокрутка */
+.slider-content::-webkit-scrollbar {
+    display: none;
+}
+.film-cast-slider {
+    padding: 20px 60px 60px 60px;
+}
+
+.actor-card {
+    min-width: 150px;
+    height: 250px;
+    background-color: lightgray;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.actor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.actor-card p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: #333;
+}
+/* Стили для футера */
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
