@@ -29,3 +29,5 @@ if (filmId) {
     alert("Фильм не выбран.");
     window.location.href = 'index.html'; // Перенаправление на главную
 }
+
+

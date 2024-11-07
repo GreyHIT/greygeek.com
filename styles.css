@@ -1,7 +1,10 @@
+/* Подключаем шрифт из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
 /* Основные стили */
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', Arial, sans-serif; /* Шрифт для основного текста */
+    background-color: #2a2a2a;
     color: white;
     margin: 0;
     padding: 0;
@@ -22,6 +25,8 @@ nav {
 }
 
 .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Обычный вес для ссылок в навигации */
     color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
@@ -53,14 +58,16 @@ nav {
     background-color: #333;
     color: white;
     cursor: pointer;
+    font-weight: 500; /* Обычный вес для кнопки */
+    font-family: 'Montserrat', sans-serif; /* Кнопки с обычным шрифтом */
 }
 
 /* Стили для главного фильма */
 .featured-film {
     position: relative;
     width: 100%;
-    height: 100vh; /* Сделаем картинку больше */
-    overflow: hidden; /* Чтобы картинка не вылезала за границы секции */
+    height: 100vh;
+    overflow: hidden;
 }
 
 .film-image {
@@ -70,7 +77,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Картинка находится позади текста */
+    z-index: -1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,23 +87,27 @@ nav {
     left: 10%;
     transform: translateY(-50%);
     color: white;
-    width: 50%; /* Ширина блока с текстом */
-    padding: 20px; /* Отступы */
+    width: 50%;
+    padding: 20px;
 }
 
 .film-title {
-    font-size: 45px; /* Увеличенный размер заголовка */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px; /* Увеличенный размер для заголовка */
+    font-weight: 700; /* Жирный шрифт для заголовка */
     margin-bottom: 10px;
 }
 
 .film-description {
-    font-size: 20px; /* Увеличенный размер синопсиса */
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px; /* Увеличенный размер для описания */
     margin-bottom: 20px;
+    font-weight: 400; /* Обычный вес для описания */
 }
 
 .film-buttons {
     display: flex;
-    gap: 10px; /* Отступ между кнопками */
+    gap: 10px;
 }
 
 .watch-now {
@@ -107,35 +118,44 @@ nav {
     color: black;
     font-size: 16px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Жирный шрифт для кнопки */
 }
+
 .save-film {
     padding: 12px 24px;
     border-radius: 30px;
     border: none;
     background-color: #D9D9D9;
     color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Обычный вес для кнопки */
     cursor: pointer;
 }
+
 /* Стили для слайдеров */
 .film-slider {
     padding: 20px;
 }
 
 .slider-title {
-    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px; /* Увеличенный размер для заголовков слайдеров */
+    font-weight: 700; /* Жирный шрифт для заголовков слайдеров */
     color: #333;
     margin-bottom: 10px;
 }
+
 .forma1 {
-    background-color: #fff; /* Немного светлее для контраста с основной темой */
+    background-color: #fff;
     padding: 20px;
     color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени для глубины */
-    margin: 30px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
-    max-width: 1800px; /* Ограничение максимальной ширины */
 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    max-width: 1800px;
 }
+
 .slider {
     display: flex;
     align-items: center;
@@ -149,48 +169,48 @@ nav {
     scroll-behavior: smooth;
 }
 
-/* Стили для карточек фильмов в слайдере */
 .film-card {
-    width: 220px;
-    height: 350px; /* Увеличим высоту для более просторного отображения */
+    width: 280px;
+    height: 420px;
     background-color: lightgray;
     margin-right: 15px;
     flex-shrink: 0;
     border-radius: 8px;
-    overflow: hidden; /* Скрыть переполнение для округленных углов */
-    position: relative; /* Для абсолютного позиционирования заголовка и описания */
-    transition: transform 0.2s; /* Плавный переход при наведении */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
 }
 
 .film-card:hover {
-    transform: scale(1.05); /* Увеличение карточки при наведении */
+    transform: scale(1.05);
 }
 
 .film-card-title {
+    font-family: 'Montserrat', sans-serif;
     position: absolute;
-    bottom: -10px; /* Смещаем заголовок вверх */
+    bottom: -10px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 10px;
+    font-weight: 600; /* Жирный шрифт для названия фильма */
 }
 
 .film-card-description {
     position: absolute;
-    bottom: 10px; /* Смещаем описание чуть выше */
+    bottom: 10px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 5px;
+    font-weight: 400; /* Обычный вес для описания */
 }
 
-/* Остальные стили остаются без изменений */
-
-
+/* Картинки в карточках */
 .film-card img {
     width: 100%;
     height: 100%;
@@ -198,6 +218,7 @@ nav {
     border-radius: 8px;
 }
 
+/* Кнопки слайдера */
 .slider-btn {
     background-color: #333;
     color: white;
@@ -205,6 +226,7 @@ nav {
     border: none;
     cursor: pointer;
     z-index: 1;
+    font-weight: 700; /* Жирный шрифт для кнопки */
 }
 
 /* Прокрутка */
@@ -217,4 +239,5 @@ footer {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }

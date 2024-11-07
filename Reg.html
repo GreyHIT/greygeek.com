@@ -178,31 +178,7 @@
     // Обработчик нажатия на кнопку переключения режима
     toggleModeBtn.addEventListener('click', toggleFormMode);
 
-    // Обработчик отправки формы
-    document.getElementById('registration-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // предотвращаем отправку формы по умолчанию
 
-        const formData = new FormData(this); // собираем данные формы
-
-        fetch('http://localhost:63343/register.php', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => response.text())
-            .then(data => {
-                console.log("Ответ от сервера:", data);  // Логирование ответа
-                errorMessage.textContent = data;
-                if (data.includes("Регистрация успешна")) {
-                    errorMessage.style.color = "green";
-                } else {
-                    errorMessage.style.color = "red";
-                }
-            })
-            .catch(error => {
-                console.error("Ошибка:", error);  // Логирование ошибки
-                errorMessage.textContent = "Ошибка: " + error;
-            });
-    });
 </script>
 
 </body>

@@ -1,4 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Получаем все слайдеры на странице
+    const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach(slider => {
+        const prevBtn = slider.querySelector('.prev-btn');
+        const nextBtn = slider.querySelector('.next-btn');
+        const sliderContent = slider.querySelector('.slider-content');
+        const cards = slider.querySelectorAll('.film-card, .actor-card'); // Общий выбор для всех слайдеров
+
+        // Если карточек нет, пропускаем этот слайдер
+        if (cards.length === 0) return;
+
+        const scrollAmount = cards[0].offsetWidth + 15; // Ширина карточки с отступом
+
+        // Обработчик кнопки "предыдущий"
+        prevBtn.addEventListener('click', () => {
+            sliderContent.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Обработчик кнопки "следующий"
+        nextBtn.addEventListener('click', () => {
+            sliderContent.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
     const isFilmPage = window.location.pathname.includes('Film.html');
 
     if (isFilmPage) {
