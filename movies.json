@@ -1,0 +1,340 @@
+{
+  "interstellar": {
+    "title": "Интерстеллар",
+    "year": 2014,
+    "country": "США",
+    "budget": "$165 млн",
+    "genre": "Фантастика, Драма",
+    "boxOffice": "$677 млн",
+    "director": "Кристофер Нолан",
+    "poster": "img.png",
+    "runtime": "169 мин",
+    "trailer": "https://www.youtube.com/embed/zSWdZVtXT7E?si=PJqcra0Bc6TDjAvO",
+    "cast": [
+      {"name": "Мэттью МакКонахи", "photo": "actor1.jpg"},
+      {"name": "Анн Хэтэуэй", "photo": "actor2.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Джессика Честейн", "photo": "actor3.jpg"},
+      {"name": "Майкл Кейн", "photo": "actor4.jpg"}
+    ],
+    "synopsis": "Фильм \"Интерстеллар\" разворачивается в будущем, когда Земля страдает от экологической катастрофы, угрожающей выживанию человечества. Главный герой, Купер (Мэттью МакКонахи), бывший пилот НАСА, теперь фермер, живущий со своими детьми, Томом и Мёрф. Мёрф обнаруживает странные гравитационные аномалии в своем доме, которые указывают на координаты секретной базы НАСА.\n\nКупер и Мёрф находят эту базу, где профессор Бранд (Майкл Кейн) раскрывает план по спасению человечества: исследовать потенциально пригодные для жизни планеты, находящиеся за червоточиной, недавно обнаруженной возле Сатурна. Куперу предлагают возглавить экспедицию, чтобы найти новый дом для человечества. Несмотря на протесты Мёрф, он соглашается.\n\nКоманда космического корабля \"Эндьюранс\" путешествует через червоточину к другой галактике. Они исследуют три планеты, но сталкиваются с различными трудностями. На первой планете сильные гравитационные эффекты приводят к серьезным потерям. На второй они обнаруживают доктора Мэнна (Мэтт Дэймон), который обманом заманил их, чтобы спастись самому. В попытке сбежать он саботирует их миссию, что приводит к еще большим проблемам.\n\nКупер решает пожертвовать собой, отправившись в черную дыру Гаргантюа. Там он попадает в пятимерное пространство, где находит способ передать научные данные своей дочери Мёрф в прошлое. Благодаря этим данным взрослая Мёрф решает уравнения гравитации, позволяющие человечеству покинуть Землю и начать новую жизнь в космосе.\n\nВ финале Купер возвращается и встречается с пожилой Мёрф. Затем он отправляется в новое путешествие, чтобы найти доктора Амелию Бранд (Энн Хэтэуэй) на третьей планете, где человечество может начать все сначала.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/180",
+    "recommended": [
+      {"title": "Similar Film 11", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 1", "photo": "recommended1.jpg"},
+      {"title": "Similar Film 2", "photo": "recommended2.jpg"}
+    ]
+  },
+  "deadpool3": {
+    "title": "Дэдпул 3",
+    "year": 2024,
+    "country": "США",
+    "budget": "$150 млн",
+    "genre": "Боевик, Комедия, Фантастика",
+    "boxOffice": "—",
+    "director": "Шон Леви",
+    "poster": "DPOOL.jpg",
+    "runtime": "115 мин",
+    "trailer": "https://www.youtube.com/embed/-LyG8fWTOlA",
+    "cast": [
+      {"name": "Райан Рейнольдс", "photo": "actor_dp_ryan.jpg"},
+      {"name": "Хью Джекман", "photo": "actor_dp_hugh.jpg"},
+      {"name": "Морена Баккарин", "photo": "actor_dp_morena.jpg"},
+      {"name": "Шон Леви", "photo": "actor_dp_sean.jpg"}
+    ],
+    "synopsis": "«Дэдпул 3» возвращает самого остроумного наемника Marvel. После событий последних фильмов, Дэдпул (Райан Рейнольдс) обнаруживает себя в новой вселенной и сталкивается со старыми врагами и новыми союзниками, в том числе со знаменитым Росомахой (Хью Джекман). Однако, помимо своих остроумных комментариев и способности к регенерации, ему придется проявить себя в новой битве против грядущих угроз. Новый режиссёр Шон Леви обещает ещё больше шуток и эпических битв с участием любимых персонажей.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/60119",
+    "recommended": [
+      {"title": "Similar Film 1", "photo": "recommended_dp1.jpg"},
+      {"title": "Similar Film 2", "photo": "recommended_dp2.jpg"}
+    ]
+  },
+  "taspider_man_2": {
+    "title": "Человек-паук 2",
+    "year": 2014,
+    "country": "США",
+    "budget": "$255 млн",
+    "genre": "Боевик, Приключения, Фантастика",
+    "boxOffice": "$700 млн",
+    "director": "Марка Уэбба",
+    "poster": "spiderman.jpg",
+    "runtime": "142 мин",
+    "trailer": "https://www.youtube.com/embed/LeasTthmHgo",
+    "cast": [
+      {"name": "Эндрю Гарфилд", "photo": "actor_spiderman_andy.jpg"},
+      {"name": "Эмма Стоун", "photo": "actor_spiderman_emma.jpg"},
+      {"name": "Джейми Фокс", "photo": "actor_spiderman_jamie.jpg"},
+      {"name": "Данни Хастон", "photo": "actor_spiderman_danny.jpg"}
+    ],
+    "synopsis": "В \"Человек-паук 2\" Питер Паркер (Эндрю Гарфилд) сталкивается с новыми вызовами как супергерой и как обычный человек. После победы над зловещим Зеленым Гоблином, Питер пытается балансировать между своей жизнью и обязанностями Человека-паука. Его отношения с Гвен Стейси (Эмма Стоун) подвергаются испытанию, так как он решает держать ее в безопасности, отказываясь от своих чувств.\n\n                Питер сталкивается с новой угрозой — Электро (Джейми Фокс), мощным суперзлодеем, который способен управлять электричеством. В то же время он вновь встречает старого друга — Гарри Осборна (Дэйн ДеХаан), который страдает от болезни, требующей лечения. Гарри, желая получить помощь от Питера, обнаруживает тайну о Человеке-пауке, что приводит к серьезным последствиям.\n\n                Когда Электро начинает терроризировать Нью-Йорк, Питер осознает, что он должен снова надеть маску, чтобы защитить свой город и своих близких. Однако, его внутренние демоны и внешние враги ставят его на грань. Конфликт между Питером и Электро достигает своего пика, когда Питер должен сделать трудный выбор между своей личной жизнью и своим долгом как героя.\n\n                С каждой новой битвой, Питер учится, что истинная сила заключается не только в его суперспособностях, но и в любви, дружбе и самопожертвовании. Этот фильм — история о том, как Питер Паркер принимает свои обязанности и, в конечном счете, находит свое истинное призвание как Человек-паук.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/1184",
+    "recommended": [
+      {"title": "Человек-паук: Вдали от дома", "photo": "recommended_spiderman1.jpg"},
+      {"title": "Мстители: Финал", "photo": "recommended_spiderman2.jpg"}
+    ]
+  },
+  "dune_part_two": {
+    "title": "Дюна: Часть 2",
+    "year": 2024,
+    "country": "США",
+    "budget": "$200 млн",
+    "genre": "Фантастика, Приключения, Драма",
+    "boxOffice": "—",
+    "director": "Дени Вильнёв",
+    "poster": "dune2.jpg",
+    "runtime": "155 мин",
+    "trailer": "https://api.embess.ws/embed/movie/65138",
+    "cast": [
+      {"name": "Тимоти Шаламе", "photo": "actor_dune_timothee.jpg"},
+      {"name": "Зендая", "photo": "actor_dune_zendaya.jpg"},
+      {"name": "Оскар Айзек", "photo": "actor_dune_oscar.jpg"},
+      {"name": "Ребекка Фергюсон", "photo": "actor_dune_rebecca.jpg"}
+    ],
+    "synopsis": "Вторая часть эпической саги по мотивам романа Фрэнка Герберта. Пол Атрейдес, теперь лидер фременов, должен привести свой народ в борьбе за контроль над планетой Арракис, источником ценного вещества — специи. В этой части Пол сталкивается с новыми угрозами, как политическими, так и мистическими, когда его судьба становится не только вопросом выживания, но и властью над Вселенной.",
+    "videoPlayer": "https://34085.svetacdn.in/nPBZWDQ5doe2/movie/100?domain=kinogo.ec",
+    "recommended": [
+      {"title": "Дюна: Часть 1", "photo": "recommended_dune1.jpg"},
+      {"title": "Звездные войны: Империя наносит ответный удар", "photo": "recommended_dune2.jpg"}
+    ]
+  },
+  "guardians_of_the_galaxy_3": {
+    "title": "Стражи Галактики 3",
+    "year": 2023,
+    "country": "США",
+    "budget": "$250 млн",
+    "genre": "Боевик, Приключения, Фантастика",
+    "boxOffice": "$845 млн",
+    "director": "Джеймс Ганн",
+    "poster": "guardians3.jpg",
+    "runtime": "150 мин",
+    "trailer": "https://www.youtube.com/embed/FqkH4hMc7TY",
+    "cast": [
+      {"name": "Крис Пратт", "photo": "actor_guardians_chris.jpg"},
+      {"name": "Зои Салдана", "photo": "actor_guardians_zoe.jpg"},
+      {"name": "Дэйв Батиста", "photo": "actor_guardians_dave.jpg"},
+      {"name": "Пом Клементьефф", "photo": "actor_guardians_pom.jpg"}
+    ],
+    "synopsis": "В третьей части космических приключений Стражей Галактики, группа сталкивается с новыми угрозами, в том числе с опасным врагом, угрожающим их миру и вселенной. В поисках спасения, герои сталкиваются с тяжелыми выборами и жертвами. С этим фильмом заканчивается эпоха для некоторых персонажей, но и открывается новая глава в приключениях Стражей.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/61473",
+    "recommended": [
+      {"title": "Мстители: Война бесконечности", "photo": "recommended_guardians1.jpg"},
+      {"title": "Стражи Галактики 2", "photo": "recommended_guardians2.jpg"}
+    ]
+  },
+  "john_wick_4": {
+    "title": "Джон Уик 4",
+    "year": 2023,
+    "country": "США",
+    "budget": "$100 млн",
+    "genre": "Боевик, Криминал, Триллер",
+    "boxOffice": "$426 млн",
+    "director": "Чад Стахелски",
+    "poster": "johnwick4.jpg",
+    "runtime": "169 мин",
+    "trailer": "https://www.youtube.com/embed/nAygAfpVxms",
+    "cast": [
+      {"name": "Киану Ривз", "photo": "actor_johnwick_kianu.jpg"},
+      {"name": "Лоуренс Фишборн", "photo": "actor_johnwick_laurence.jpg"},
+      {"name": "Хироюки Санада", "photo": "actor_johnwick_hiroyuki.jpg"},
+      {"name": "Донни Йен", "photo": "actor_johnwick_donnie.jpg"}
+    ],
+    "synopsis": "Джон Уик продолжает свою борьбу за выживание, преследуемый наёмниками и организованной преступностью по всему миру. С каждым шагом ему приходится делать выбор между жизнью и смертью, пока его неутомимый враг не оказывается совсем рядом. Четвёртая часть франшизы продолжает захватывающее повествование о мести и самопожертвовании.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/52783",
+    "recommended": [
+      {"title": "Джон Уик 3", "photo": "recommended_johnwick3.jpg"},
+      {"title": "Механик: Воскрешение", "photo": "recommended_johnwick2.jpg"}
+    ]
+  },
+  "barbie": {
+    "title": "Барби",
+    "year": 2023,
+    "country": "США",
+    "budget": "$145 млн",
+    "genre": "Комедия, Фэнтези",
+    "boxOffice": "$1.4 млрд",
+    "director": "Грета Гервиг",
+    "poster": "barbie.jpg",
+    "runtime": "114 мин",
+    "trailer": "https://www.youtube.com/embed/pBk5P2BHDhU",
+    "cast": [
+      {"name": "Марго Робби", "photo": "actor_barbie_margot.jpg"},
+      {"name": "Райан Гослинг", "photo": "actor_barbie_ryan.jpg"},
+      {"name": "Кейт МакКиннон", "photo": "actor_barbie_kate.jpg"},
+      {"name": "Хелен Миррен", "photo": "actor_barbie_helen.jpg"}
+    ],
+    "synopsis": "Барби отправляется в удивительное путешествие, сталкиваясь с миром, который не так идеален, как она думала. Вместе с Кеном и другими персонажами Барби оказывается втянута в политическую борьбу и обнаруживает, что существует гораздо больше, чем можно было бы ожидать от кукольного мира.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/61884",
+    "recommended": [
+      {"title": "Тролли 2", "photo": "recommended_barbie1.jpg"},
+      {"title": "Красавица и Чудовище", "photo": "recommended_barbie2.jpg"}
+    ]
+  },
+  "venom_3_last_dance": {
+    "title": "Веном 3: Последний танец",
+    "year": 2024,
+    "country": "США",
+    "budget": "$250 млн",
+    "genre": "Экшн, Приключения, Фантастика",
+    "boxOffice": "$950 млн",
+    "director": "Andy Serkis",
+    "poster": "venom3lastdance.jpg",
+    "runtime": "135 мин",
+    "trailer": "https://www.youtube.com/embed/xxx_your_trailer_link_here",
+    "cast": [
+      {"name": "Tom Hardy", "photo": "actor_venom3_tom.jpg"},
+      {"name": "Woody Harrelson", "photo": "actor_venom3_woody.jpg"},
+      {"name": "Naomi Harris", "photo": "actor_venom3_naomi.jpg"},
+      {"name": "Michelle Williams", "photo": "actor_venom3_michelle.jpg"}
+    ],
+    "synopsis": "Веном и Эдди Брок сталкиваются с новой угрозой — могущественным противником, который может уничтожить всё, что они любят. В этом эпическом финале Веном должен столкнуться с темными сторонами своего существования и принять важные решения, которые могут изменить их судьбу.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/74281",
+    "recommended": [
+      {"title": "Человек-паук: Нет пути домой", "photo": "recommended_venom3_1.jpg"},
+      {"title": "Тор: Любовь и гром", "photo": "recommended_venom3_2.jpg"}
+    ]
+  },
+  "alien_rollum": {
+    "title": "Чужой: Ролум",
+    "year": 2024,
+    "country": "США",
+    "budget": "$200 млн",
+    "genre": "Хоррор, Научная фантастика, Триллер",
+    "boxOffice": "$800 млн",
+    "director": "Ridley Scott",
+    "poster": "alienrollum.jpg",
+    "runtime": "125 мин",
+    "trailer": "https://www.youtube.com/embed/your_trailer_link_here",
+    "cast": [
+      {"name": "Ridley Scott", "photo": "actor_alien_rollum_ridley.jpg"},
+      {"name": "Jessica Chastain", "photo": "actor_alien_rollum_jessica.jpg"},
+      {"name": "Michael Fassbender", "photo": "actor_alien_rollum_michael.jpg"},
+      {"name": "Oscar Isaac", "photo": "actor_alien_rollum_oscar.jpg"}
+    ],
+    "synopsis": "После трагических событий на чуждой планете, группа космических исследователей обнаруживает забытое космическое сооружение. Но то, что они найдут внутри, изменит их жизнь навсегда. Встреча с таинственными существами ведет к борьбе за выживание, и каждый из них становится частью ужасной игры на выживание. Новый виток франшизы, который откроет новые стороны чудовищной вселенной.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/73134",
+    "recommended": [
+      {"title": "Чужой: Завет", "photo": "recommended_alien_rollum_1.jpg"},
+      {"title": "Гравитация", "photo": "recommended_alien_rollum_2.jpg"}
+    ]
+  },
+  "bad_boys_for_life_3": {
+    "title": "Плохие парни до конца",
+    "year": 2024,
+    "country": "США",
+    "budget": "$200 млн",
+    "genre": "Экшн, Комедия, Криминал",
+    "boxOffice": "$500 млн",
+    "director": "Adil El Arbi, Bilall Fallah",
+    "poster": "badboys_3poster.jpg",
+    "runtime": "120 мин",
+    "trailer": "https://www.youtube.com/embed/your_trailer_link_here",
+    "cast": [
+      {"name": "Will Smith", "photo": "actor_bad_boys_will.jpg"},
+      {"name": "Martin Lawrence", "photo": "actor_bad_boys_martin.jpg"},
+      {"name": "Vanessa Hudgens", "photo": "actor_bad_boys_vanessa.jpg"},
+      {"name": "Paula Patton", "photo": "actor_bad_boys_paula.jpg"}
+    ],
+    "synopsis": "Майк Лоури и Маркус Бёрнс возвращаются в последний раз в эпической битве против самого могущественного преступного картеля. Время на исходе, и их дружба, отношения и стремление к правде будут поставлены на серьезные испытания. Это их последнее дело, и они готовы отдать все ради того, чтобы поймать самых опасных преступников города.",
+    "videoPlayer": "https://api.embess.ws/embed/movie/69881",
+    "recommended": [
+      {"title": "Плохие парни 2", "photo": "recommended_bad_boys_2.jpg"},
+      {"title": "Брюс Всемогущий", "photo": "recommended_bad_boys_3_bruce.jpg"}
+    ]
+  },
+
+  "hidden_figures": {
+    "title": "Скрытые фигуры",
+    "year": 2020,
+    "country": "США",
+    "budget": "$25 млн",
+    "genre": "Драма, Исторический",
+    "boxOffice": "$230 млн",
+    "director": "Теодор Мелфи",
+    "poster": "hidden_figures.jpg",
+    "runtime": "127 мин",
+    "trailer": "https://www.youtube.com/embed/5wFRpW2zR9k",
+    "cast": [
+      {"name": "Тараджи П. Хенсон", "photo": "actor_hidden_figures_taraji.jpg"},
+      {"name": "Октавия Спенсер", "photo": "actor_hidden_figures_octavia.jpg"},
+      {"name": "Джанель Моне", "photo": "actor_hidden_figures_janelle.jpg"}
+    ],
+    "synopsis": "Фильм рассказывает о трех афроамериканках, которые работали в NASA в 1960-х годах и сыграли ключевую роль в успешной миссии по запуску астронавта в космос, несмотря на многочисленные социальные и расовые барьеры.",
+    "videoPlayer": "https://34085.svetacdn.in/nPBZWDQ5doe2/movie/451?domain=kinogo.ec",
+    "recommended": [
+      {"title": "12 лет рабства", "photo": "recommended_hidden_figures1.jpg"},
+      {"title": "Социальная сеть", "photo": "recommended_hidden_figures2.jpg"}
+    ]
+  },
+  "a_whisper_of_hope": {
+    "title": "Шепот надежды",
+    "year": 2023,
+    "country": "Франция",
+    "budget": "$5 млн",
+    "genre": "Драма",
+    "boxOffice": "$10 млн",
+    "director": "Жан-Люк Гаррель",
+    "poster": "whisper_of_hope.jpg",
+    "runtime": "112 мин",
+    "trailer": "https://www.youtube.com/embed/HLbC2Gp7r9Y",
+    "cast": [
+      {"name": "Марион Котийяр", "photo": "actor_whisper_of_hope_marion.jpg"},
+      {"name": "Тьерри Ларивье", "photo": "actor_whisper_of_hope_thierry.jpg"},
+      {"name": "Адель Экзаркопулос", "photo": "actor_whisper_of_hope_adele.jpg"}
+    ],
+    "synopsis": "Эмоциональная драма, которая раскрывает силу маленьких шагов, приведших к большой перемене в жизни одной семьи. После трагического события, которое потрясает главных героев, они находят в себе силы бороться за свою любовь и жизнь.",
+    "videoPlayer": "https://34085.svetacdn.in/nPBZWDQ5doe2/movie/843?domain=kinogo.ec",
+    "recommended": [
+      {"title": "Портрет девушки в огне", "photo": "recommended_whisper_of_hope1.jpg"},
+      {"title": "Великая красота", "photo": "recommended_whisper_of_hope2.jpg"}
+    ]
+  },
+  "come_away": {
+    "title": "Приди, если сможешь",
+    "year": 2020,
+    "country": "Великобритания",
+    "budget": "$50 млн",
+    "genre": "Фэнтези, Приключения",
+    "boxOffice": "$13 млн",
+    "director": "Бренда Чепмен",
+    "poster": "come_away.jpg",
+    "runtime": "94 мин",
+    "trailer": "https://www.youtube.com/embed/yTrS2h9pI84",
+    "cast": [
+      {"name": "Анна Чэнселлор", "photo": "actor_come_away_anna.jpg"},
+      {"name": "Маккензи Фой", "photo": "actor_come_away_mackenzie.jpg"},
+      {"name": "Дэвид Ойелово", "photo": "actor_come_away_david.jpg"}
+    ],
+    "synopsis": "Перед нами альтернативная история о детях Питера Пэна и Алисы из Страны чудес, их взросление и приключения в мире фантазий и магии. Зрители окунаются в детство известных персонажей, чтобы понять, что стало поворотным моментом в их жизни.",
+    "videoPlayer": "https://34085.svetacdn.in/nPBZWDQ5doe2/movie/701?domain=kinogo.ec",
+    "recommended": [
+      {"title": "Питер Пэн", "photo": "recommended_come_away1.jpg"},
+      {"title": "Алиса в стране чудес", "photo": "recommended_come_away2.jpg"}
+    ]
+  }
+
+
+}
