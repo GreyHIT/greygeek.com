@@ -190,12 +190,46 @@ nav {
 }
 
 .slider-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #ffffff; /* Белый фон */
+    color: #333; /* Темный текст */
+    padding: 30px; /* Размер кнопки */
+    font-size: 24px; /* Увеличенный шрифт */
     border: none;
     cursor: pointer;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    z-index: 10;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Легкая тень */
+}
+
+/* Левая кнопка */
+.slider-btn.prev-btn {
+    left: -10px; /* Сдвигаем кнопку влево */
+    border-bottom-right-radius: 25px;/* Круглая форма */
+    border-top-right-radius: 25px;
+}
+
+/* Правая кнопка */
+.slider-btn.next-btn {
+    right: -10px; /* Сдвигаем кнопку вправо */
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+/* Эффект при наведении */
+.slider-btn:hover {
+    background-color: #333; /* Темный фон при наведении */
+    color: #ffffff; /* Белый текст */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Увеличенная тень при наведении */
+
+}
+
+/* Эффект при нажатии */
+.slider-btn:active {
+    background-color: #555; /* Темнее при нажатии */
+    box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.4); /* Вдавленность */
 }
 
 /* Прокрутка */
@@ -207,26 +241,32 @@ nav {
 }
 
 .actor-card {
-    min-width: 150px;
-    height: 250px;
-    background-color: lightgray;
+    min-width: 180px;
+    height: 280px;
+    background-color: #1C1C1C;
     margin-right: 15px;
     flex-shrink: 0;
-    border-radius: 8px;
+    border-radius: 24px;
     text-align: center;
+    border: 8px solid #1C1C1C; /* Добавляем обводку вокруг карточки */
 }
 
 .actor-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 18px;
+
 }
 
 .actor-card p {
     font-size: 16px;
     margin: 5px 0 0;
-    color: #333;
+    color: white;
+}
+
+h2{
+    font-size: 32px;
 }
 /* Стили для футера */
 footer {

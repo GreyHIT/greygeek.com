@@ -93,35 +93,53 @@ nav {
 
 .film-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px; /* Увеличенный размер для заголовка */
+    font-size: 70px; /* Увеличенный размер для заголовка */
     font-weight: 700; /* Жирный шрифт для заголовка */
-    margin-bottom: 10px;
+    margin-bottom: -10px;
 }
 
 .film-description {
     font-family: 'Roboto', sans-serif;
     font-size: 22px; /* Увеличенный размер для описания */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 400; /* Обычный вес для описания */
 }
 
 .film-buttons {
     display: flex;
-    gap: 10px;
+    gap: 28px;
+    padding-bottom: 48px;
 }
 
+/* Кнопка "Смотреть сейчас" */
 .watch-now {
-    padding: 18px 30px;
+    padding: 15px 68px;
     border-radius: 35px;
     border: none;
     background-color: #D9D9D9;
     color: black;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Жирный шрифт для кнопки */
+    font-weight: 500; /* Жирный шрифт для кнопки */
+    transition: all 0.3s ease; /* Плавный переход для всех изменений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
 
+/* Эффект при наведении на кнопку "Смотреть сейчас" */
+.watch-now:hover {
+    background-color: #C2C2C2; /* Светлый оттенок при наведении */
+    transform: translateY(-2px); /* Поднимаем кнопку немного */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Усиленная тень при наведении */
+}
+
+/* Эффект при активном нажатии на кнопку "Смотреть сейчас" */
+.watch-now:active {
+    transform: translateY(0); /* При нажатии кнопка возвращается на место */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Сбрасываем тень */
+}
+
+/* Кнопка "Сохранить фильм" */
 .save-film {
     padding: 12px 24px;
     border-radius: 30px;
@@ -131,11 +149,28 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500; /* Обычный вес для кнопки */
     cursor: pointer;
+    transition: all 0.3s ease; /* Плавный переход для всех изменений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
+
+/* Эффект при наведении на кнопку "Сохранить фильм" */
+.save-film:hover {
+    background-color: #C2C2C2; /* Светлый оттенок при наведении */
+    transform: translateY(-2px); /* Поднимаем кнопку немного */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Усиленная тень при наведении */
+}
+
+/* Эффект при активном нажатии на кнопку "Сохранить фильм" */
+.save-film:active {
+    transform: translateY(0); /* При нажатии кнопка возвращается на место */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Сбрасываем тень */
+}
+
 
 /* Стили для слайдеров */
 .film-slider {
     padding: 20px;
+
 }
 
 .slider-title {
@@ -143,7 +178,7 @@ nav {
     font-size: 30px; /* Увеличенный размер для заголовков слайдеров */
     font-weight: 700; /* Жирный шрифт для заголовков слайдеров */
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
 }
 
 .forma1 {
@@ -167,36 +202,53 @@ nav {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    min-height: 480px; /* Минимальная высота слайдера */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
+
 
 .film-card {
     width: 280px;
     height: 420px;
-    background-color: lightgray;
-    margin-right: 15px;
+    background-color: #333;
+    margin-right: 25px;
     flex-shrink: 0;
-    border-radius: 8px;
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .film-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.7);
+}
+
+.film-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .film-card-title {
-    font-family: 'Montserrat', sans-serif;
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 10px;
-    font-weight: 600; /* Жирный шрифт для названия фильма */
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0 0 15px 15px;
+    margin: 0;
 }
+
+
 
 .film-card-description {
     position: absolute;
@@ -218,16 +270,54 @@ nav {
     border-radius: 8px;
 }
 
-/* Кнопки слайдера */
+
+
+
+/* Основные стили кнопок */
 .slider-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #ffffff; /* Белый фон */
+    color: #333; /* Темный текст */
+    padding: 30px; /* Размер кнопки */
+    font-size: 24px; /* Увеличенный шрифт */
     border: none;
     cursor: pointer;
-    z-index: 1;
-    font-weight: 700; /* Жирный шрифт для кнопки */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    z-index: 10;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Легкая тень */
 }
+
+/* Левая кнопка */
+.slider-btn.prev-btn {
+    left: -10px; /* Сдвигаем кнопку влево */
+    border-bottom-right-radius: 25px;/* Круглая форма */
+    border-top-right-radius: 25px;
+}
+
+/* Правая кнопка */
+.slider-btn.next-btn {
+    right: -10px; /* Сдвигаем кнопку вправо */
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+/* Эффект при наведении */
+.slider-btn:hover {
+    background-color: #333; /* Темный фон при наведении */
+    color: #ffffff; /* Белый текст */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Увеличенная тень при наведении */
+
+}
+
+/* Эффект при нажатии */
+.slider-btn:active {
+    background-color: #555; /* Темнее при нажатии */
+    box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.4); /* Вдавленность */
+}
+
+
 
 /* Прокрутка */
 .slider-content::-webkit-scrollbar {
