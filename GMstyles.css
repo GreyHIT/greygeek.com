@@ -1,0 +1,652 @@
+body {
+    background-color: #1C1C1C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #0D0D0D;
+    padding: 20px;
+    z-index: 10;
+}
+
+nav {
+    width: 95%;
+    display: flex;
+    justify-content: space-between; /* Элементы будут распределяться по ширине */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.greym {
+    height: 43px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Контейнер для логотипа */
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Контейнер для поиска */
+.search-container {
+    position: relative;
+    width: 240%;
+    max-width: 500px; /* Максимальная ширина поля поиска */
+    right: 160px;
+
+}
+
+/* Основные стили для поля поиска */
+.search-text {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Плейсхолдер */
+.search-text::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Эффект при наведении */
+.search-text:hover {
+    background-color: #444;
+}
+
+/* Эффект при фокусе */
+.search-text:focus {
+    background-color: #444;
+    border-color: #bbb;
+    animation: border-animate 1s ease forwards;
+}
+
+/* Анимация для заполения рамки белым цветом */
+@keyframes border-animate {
+    0% {
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid transparent;
+    }
+    100% {
+        border-top: 2px solid #bbb;
+        border-right: 2px solid #bbb;
+        border-bottom: 2px solid #bbb;
+        border-left: 2px solid #bbb;
+    }
+}
+
+/* Стили для списка */
+.search-list {
+    display: none;
+    position: absolute;
+    top: 100%; /* Список появляется прямо под полем поиска */
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    padding: 10px 0;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Появление списка при фокусе на поле поиска */
+.search-text:focus + .search-list {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для элементов списка */
+.search-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+.search-list ul li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект наведения на элементы списка */
+.search-list ul li:hover {
+    background-color: #555;
+}
+
+/* Пример иконок для музыкальных результатов */
+.search-list ul li::before {
+    content: '\f001'; /* Unicode для иконки музыкальной ноты (Font Awesome) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+/* Контейнер для кнопки Login */
+.right-nav {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Не уменьшаем кнопку */
+}
+
+/* Кнопка Login */
+.login-btn {
+    padding: 10px 20px;
+    background-color: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+/* Стили для левого меню */
+.left-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #202020;
+    width: 350px;
+    height: calc(100% - 80px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.left-menu.open {
+    transform: translateX(0);
+}
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    color: white;
+}
+
+.left-menu ul li {
+    margin-bottom: 20px;
+}
+
+/* Гамбургер-меню */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle div {
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.main-content h1 {
+    color: white;
+    margin-bottom: -10px;
+}
+
+.f1 {
+    width: 180px;
+    height: 280px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 25px;
+    text-align: left;
+    border: none;
+    margin-top: 0;
+}
+
+.f1 legend {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 13px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: 24px;
+    left: 10px;
+
+}
+
+.f1 img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.f1 h2 {
+    font-size: 16px;
+    color: white;
+    margin: -3px 0 4px;
+}
+
+.f1 p {
+    font-size: 14px;
+    color: #ddd;
+    margin: 0;
+}
+
+
+
+.f2 {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the left */
+    width: 85%; /* Take full available width */
+    padding: 10px 15px; /* Add some padding */
+    border-radius:  8px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #202020; /* Initial background color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.f2:hover {
+    background-color: #444; /* Slightly lighter color on hover */
+}
+
+.f2 img {
+    width: 66px; /* Adjust the size of the image */
+    height: 66px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px; /* Add space between the image and the text */
+}
+
+.f2 .text-container {
+    display: flex;
+    flex-direction: column; /* Stack the text vertically */
+}
+
+.f2 h2 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+.f2 p {
+    font-size: 14px;
+    color: #ddd;
+    margin: 0;
+}
+
+
+
+
+
+
+.mainform {
+    display: flex;
+    flex-wrap: wrap; /* чтобы переносить на новую строку, если элементов много */
+    gap: 20px; /* расстояние между полями */
+}
+
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    transition: margin-left 0.3s ease, padding-left 0.3s ease;
+    margin-left: 0;
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+.main-content.shrink {
+    margin-left: 50px;
+    padding-left: 350px;
+}
+
+
+
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+
+
+
+/* Основной стиль мини-плеера */
+.mini-player {
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    height: 80px;
+    position: fixed;
+    bottom: -100px; /* Изначально скрыт ниже экрана */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: bottom 0.3s ease-in-out;
+    justify-content: space-between;
+}
+
+.mini-player.show {
+    bottom: 0; /* Плеер появляется на экране */
+}
+
+/* Обложка трека */
+.mini-player-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Стили для информации о треке */
+.track-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 15px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mini-player-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+    white-space: nowrap;
+}
+
+.mini-player-artist {
+    font-size: 18px;
+    margin: 0;
+    color: #b3b3b3;
+    white-space: nowrap;
+}
+
+
+
+/* Кнопка закрытия */
+.mini-player-close {
+    background: none;
+    color: #b3b3b3;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: -20px;
+
+    transition: color 0.3s;
+}
+
+.mini-player-close:hover {
+    color: white;
+}
+
+/* Стиль для кнопки */
+.action-btn {
+    background-color: white; /* Белый фон кнопки */
+    color: black; /* Черный цвет текста и иконки */
+    font-size: 16px; /* Размер шрифта для иконки */
+    width: 30px; /* Ширина кнопки */
+    height: 30px; /* Высота кнопки */
+    border-radius: 50%; /* Кнопка круглая */
+    border: 2px solid black; /* Черная рамка вокруг кнопки */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    display: flex; /* Для выравнивания содержимого */
+    justify-content: center; /* Центрирование иконки по горизонтали */
+    align-items: center; /* Центрирование иконки по вертикали */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Плавные эффекты при наведении */
+}
+
+/* Эффект наведения */
+.action-btn:hover {
+    background-color: #f0f0f0; /* Легкое затемнение фона при наведении */
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* Эффект нажатия */
+.action-btn:active {
+    transform: scale(1); /* Уменьшение кнопки при нажатии */
+}
+
+/* Стиль для маленькой иконки внутри кнопки */
+.action-btn i {
+    font-size: 18px; /* Размер иконки */
+    color: black; /* Черный цвет для иконки */
+}
+
+/* Позиционирование картинки относительно кнопки */
+.f1 {
+    position: relative; /* Для позиционирования кнопки относительно картинки */
+}
+
+/* Картинка внутри fieldset (опционально, если нужно задать размеры) */
+.f1 img {
+    max-width: 100%; /* Картинка будет адаптироваться по ширине */
+    height: auto; /* Соотношение сторон сохранится */
+}
+
+
+
+
+
+.playlist1 {
+
+    right: 0; /* Прикрепить форму к правому краю */
+    width: 340px; /* Ширина формы */
+    height: 80vh; /* Высота формы на всю высоту экрана */
+    background: #202020; /* Цвет фона */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Тень для отделения формы */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    overflow-y: auto; /* Если контента много, появляется прокрутка */
+    color: white;
+    z-index: 3;
+}
+
+ul#playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#playlist li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333; /* Разделитель между треками */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+ul#playlist li:hover {
+    background-color: #333; /* Фон при наведении */
+}
+
+ul#playlist li img {
+    width: 50px; /* Ширина изображения */
+    height: 50px; /* Высота изображения */
+    object-fit: cover; /* Заполнение контейнера без искажения */
+    margin-right: 15px; /* Отступ от изображения */
+    border-radius: 5px; /* Скругление углов изображения */
+}
+
+ul#playlist li span {
+    flex-grow: 1; /* Заголовок занимает оставшееся пространство */
+}
+
+.clear-btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.clear-btn:hover {
+    background-color: #1aaf47; /* Цвет при наведении */
+}
+
+
+
+
+
+
+.audio-player-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Сделать контейнер адаптивным */
+    background-color: #181818;
+    padding: 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.song-details {
+    color: #fff;
+}
+
+.song-details #songTitle {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.song-details #songArtist {
+    display: block;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-right: 120px;
+    color: white;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+.controls button:hover {
+    color: #1db954;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 6px;
+    background-color: #333;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+.time {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.audio-player {
+    display: none;
+}
+.volume-control {
+    width: 100px; /* Размер регулятора громкости */
+    height: 5px;
+    margin-left: 20px;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
