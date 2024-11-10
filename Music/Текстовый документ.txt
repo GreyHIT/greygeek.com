@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="left-nav">
+            <div class="menu-toggle" id="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="index.html"><img class="greym" src="Greymusic.png" alt="Logo"></a>
+        </div>
+        <div class="center-search">
+            <div class="search-container">
+                <input type="text" class="search-text" placeholder="Поиск музыки...">
+                <div class="search-list">
+                    <ul id="search-list"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-nav">
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
+</header>
+
+<!-- Боковая панель -->
+<div class="left-menu" id="left-menu">
+    <fieldset class="f2" id="favorite-1">
+        <img src="Like.png" alt="Album Image">
+        <div class="text-container">
+            <h2 class="track-name">Избранные</h2>
+            <p>Песен в плейлисте: <span id="favorite-1-count">0</span></p>
+        </div>
+    </fieldset>
+
+    <fieldset class="f2" id="favorite-2">
+        <img src="Like.png" alt="Album Image">
+        <div class="text-container">
+            <h2 class="track-name">Избранные 1</h2>
+            <p>Песен в плейлисте: <span id="favorite-2-count">0</span></p>
+        </div>
+    </fieldset>
+
+    <fieldset class="f2" id="favorite-3">
+        <img src="Like.png" alt="Album Image">
+        <div class="text-container">
+            <h2 class="track-name">Избранные 2</h2>
+            <p>Песен в плейлисте: <span id="favorite-3-count">0</span></p>
+        </div>
+    </fieldset>
+
+    <!-- Очередь -->
+    <fieldset class="f2" id="queue">
+        <img src="Queue.png" alt="Queue Image">
+        <div class="text-container">
+            <h2 class="track-name">Очередь</h2>
+            <p>Песен в очереди: <span id="queue-count">0</span></p>
+        </div>
+    </fieldset>
+</div>
+
+<!-- Основной контент -->
+<div class="main-content" id="main-content">
+    <h1>Рекомендации</h1>
+    <form class="mainform" id="track-list-form">
+        <!-- Треки будут добавляться динамически сюда -->
+    </form>
+</div>
+
+<!-- Мини-плеер, который будет скрыт изначально -->
+<div class="mini-player" id="mini-player">
+    <img src="img.png" alt="Album Image" class="mini-player-img">
+    <div class="track-info">
+        <h3 class="mini-player-title">Мгла</h3>
+        <p class="mini-player-artist">М. Башкатов</p>
+    </div>
+    <div class="controls">
+        <button class="audio-prev-btn" id="prev-btn"><i class="fas fa-backward"></i></button>
+        <button class="audio-play-btn" id="play-btn"><i class="fas fa-play"></i></button>
+        <button class="audio-next-btn" id="next-btn"><i class="fas fa-forward"></i></button>
+    </div>
+    <div class="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" class="audio-progress" id="audio-progress" value="0" max="100">
+        <span id="total-time">0:00</span>
+    </div>
+    <div class="volume-container">
+        <button class="audio-volume-btn"><i class="fas fa-volume-up"></i></button>
+        <input type="range" class="audio-volume" id="audio-volume" value="100" max="100">
+    </div>
+    <button id="close-mini-player" class="mini-player-close">×</button>
+    <audio id="mini-audio" class="mini-player-audio">
+        <source src="Music/Mgla_01.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<script>
+     const menuToggle = document.getElementById('menu-toggle');
+    const leftMenu = document.getElementById('left-menu');
+    const mainContent = document.getElementById('main-content');
+
+    menuToggle.addEventListener('click', () => {
+        leftMenu.classList.toggle('open');
+        mainContent.classList.toggle('shrink'); // Сжимаем контент
+    });
+
+        // Загрузка данных о треках с сервера или из локального файла
+        fetch('musicData.json')
+            .then(response => response.json())
+            .then(data => {
+                const trackListForm = document.getElementById('track-list-form');
+                data.tracks.forEach(track => {
+                    const trackCard = document.createElement('fieldset');
+                    trackCard.classList.add('f1');
+                    trackCard.id = `track-${track.id}`;
+                    trackCard.innerHTML = `
+                        <legend>${track.isNew ? 'Новинка' : 'Трек'}</legend>
+                        <img src="${track.coverImage}" alt="Изображение трека">
+                        <h2 class="track-name">${track.title}</h2>
+                        <p>${track.artist}</p>
+                        <button class="action-btn" data-track="${track.id}" data-audio="${track.audioFile}" type="button"><i class="fa fa-plus"></i></button>
+                    `;
+                    trackListForm.appendChild(trackCard);
+
+                    // Воспроизведение при клике на fieldset
+                    trackCard.addEventListener('click', () => {
+                        const audioUrl = track.audioFile;  // Используем путь к аудиофайлу из JSON
+                        const trackTitle = track.title;
+                        const trackArtist = track.artist;
+
+                        // Обновление информации о текущем треке в мини-плеере
+                        const miniAudio = document.getElementById('mini-audio');
+                        miniAudio.src = audioUrl;
+
+                        // Обновление текста в мини-плеере
+                        document.querySelector('.mini-player-title').textContent = trackTitle;
+                        document.querySelector('.mini-player-artist').textContent = trackArtist;
+
+                        // Показ мини-плеера и начало воспроизведения
+                        const miniPlayer = document.getElementById('mini-player');
+                        miniPlayer.classList.add('show');
+                        miniAudio.play();
+
+                        // Обновление кнопки воспроизведения
+                        document.getElementById('play-btn').innerHTML = '<i class="fas fa-pause"></i>';
+                    });
+                });
+
+                // Логика для добавления в избранные
+                const addBtns = document.querySelectorAll('.action-btn');
+                addBtns.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const trackId = e.target.dataset.track;
+                        const audioFile = e.target.dataset.audio;
+
+                        // Обработка добавления в избранные и очередь
+                        // Например, добавление в localStorage или обновление UI
+                    });
+                });
+
+                // Мини-плеер
+                const playBtn = document.getElementById('play-btn');
+                const audio = document.getElementById('mini-audio');
+                const progressBar = document.getElementById('audio-progress');
+                const volumeControl = document.getElementById('audio-volume');
+                const currentTimeDisplay = document.getElementById('current-time');
+                const totalTimeDisplay = document.getElementById('total-time');
+
+                audio.addEventListener('loadedmetadata', () => {
+                    totalTimeDisplay.textContent = formatTime(audio.duration);
+                });
+
+                playBtn.addEventListener('click', () => {
+                    if (audio.paused) {
+                        audio.play();
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    } else {
+                        audio.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+
+                audio.addEventListener('timeupdate', () => {
+                    progressBar.value = (audio.currentTime / audio.duration) * 100;
+                    currentTimeDisplay.textContent = formatTime(audio.currentTime);
+                });
+
+                progressBar.addEventListener('input', (e) => {
+                    audio.currentTime = (e.target.value / 100) * audio.duration;
+                });
+
+                volumeControl.addEventListener('input', (e) => {
+                    audio.volume = e.target.value / 100;
+                });
+
+                function formatTime(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const remainingSeconds = Math.floor(seconds % 60);
+                    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+                }
+
+                document.getElementById('close-mini-player').addEventListener('click', () => {
+                    const miniPlayer = document.getElementById('mini-player');
+                    miniPlayer.classList.remove('show');
+                    audio.pause();
+                    audio.currentTime = 0;
+                    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                });
+            })
+            .catch(error => console.log('Ошибка при загрузке данных:', error));
+    });
+</script>
+</body>
+</html>
